@@ -1,0 +1,9 @@
+{
+  "short_name": "Code Pen Clone",
+  "name": "Code Pen Clone",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
