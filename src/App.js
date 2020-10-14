@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Editor from './Editor';
-import useLocalStorage from '../Hooks/useLocalStorage';
+import Editor from './components/Editor';
+import useLocalStorage from './Hooks/useLocalStorage';
 
 export default function App() {
   const [html, setHtml] = useLocalStorage('html', '')
@@ -21,24 +21,24 @@ export default function App() {
     return () => {
       clearTimeout(timeout)
     }
-  }, [html, css, javascript])     
+  }, [html, css, javascript])
 
   return (
     <>
         <div className="pane pane-top">
-          <Editor 
+          <Editor
             language="xml"
             displayName="HTML"
             value={html}
             onChange={setHtml}
           />
-          <Editor 
+          <Editor
             language="css"
             displayName="CSS"
             value={css}
             onChange={setCss}
           />
-          <Editor 
+          <Editor
             language="javascript"
             displayName="JS"
             value={javascript}
